@@ -40,6 +40,25 @@
 - **Modal**: Imperative (boolean flag `showBingoModal`).
 - **Styling**: Tailwind only. Global CSS in `src/index.css` for theme vars.
 
+## Design Guide (Eco Leafy Green)
+
+- **Theme Intent**: Calm, natural, and leafy. Keep visuals warm, organic, and readable.
+- **Color System**: Use theme tokens from `src/index.css` (`--color-accent`, `--color-accent-light`, `--color-marked`, `--color-marked-border`, `--color-bingo`). Prefer token-based classes over hard-coded colors.
+- **Typography**: Brand headings use `Fraunces` (display serif). Body/UI text uses `Manrope`.
+- **Surfaces**: Use soft card surfaces (`bg-white/85+`), rounded corners, gentle green borders, and restrained shadows.
+- **Backgrounds**: Prefer subtle layered gradients/radial texture over flat gray backgrounds.
+- **Buttons**: High-contrast filled green primary actions; subtle hover/active feedback only.
+- **Board Squares**:
+	- Default: light surface, clear border, high legibility.
+	- Marked: use marked token colors.
+	- Winning: distinct celebratory green-yellow tone (`--color-bingo` family).
+	- Free space: visually distinct and always non-interactive.
+- **Motion**: Minimal and purposeful (`150–250ms` transitions, simple fade/slide for modal). Avoid flashy or continuous animation.
+- **Layout**: Mobile-first, centered board, stable spacing rhythm, sticky lightweight header on game screen.
+- **Accessibility**: Maintain strong text contrast, visible state differences, and tap-target comfort. Never rely on color alone for critical state communication.
+- **Content**: Keep current product copy (`Soc Ops`, `Social Bingo`) unless a task explicitly requests copy updates.
+- **Scope Discipline**: Redesign visually without changing gameplay behavior or state architecture.
+
 ## Common Tasks
 
 **Add Questions**: Edit `src/data/questions.ts` (24 strings, non-free only).  
